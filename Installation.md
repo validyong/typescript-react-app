@@ -7,3 +7,5 @@ npm install chai mocha ts-node @types/chai @types/mocha --save-dev
 ```
 
 this is not
+
+git default user is wrong
