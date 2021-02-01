@@ -1,0 +1,18 @@
+{
+    "book": [
+        {
+            "isbn": "1234567890123",
+            "book_name": "The Derivatives",
+            "company": "AbsoluteMath",
+            "price": 12.00,
+            "genre_code": 2
+        },
+        {
+            "isbn": "1234567890124",
+            "book_name": "The Coding Monster",
+            "company": "Hibernatingers",
+            "price": 6.00,
+            "genre_code": 4
+        }
+    ]
+}
