@@ -10,6 +10,8 @@
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
+    "babel-cli": "^6.26.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -17,11 +19,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "test": "nyc ./node_modules/.bin/_mocha 'tests/**/*.test.ts'",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "mochatest": "mocha -r ts-node/register src/**/test-hello.ts"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,11 +43,21 @@
     ]
   },
   "devDependencies": {
+    "@testdeck/mocha": "^0.1.2",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.2.0",
     "chai": "^4.2.0",
+    "http-server": "^0.12.3",
     "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "ts-mockito": "^2.6.1",
     "ts-node": "^9.1.1",
-    "typings": "^2.1.1"
-  }
+    "typings": "^2.1.1",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/validyong/typescript-react-app.git",
+  "author": "validyong <rokudynamics@gmail.com>",
+  "license": "MIT"
 }
