@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": [
+        "./src"
+      ]
+    },
     "target": "es6",
     "lib": [
       "dom",
