@@ -61,19 +61,20 @@ class Create extends React.Component<RouteComponentProps, IFormState> {
         ]);
     }
 
-    private handleInputChanges = (e: React.FormEvent<HTMLInputElement>) => {
+    private handleInputChanges = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         e.preventDefault();
         this.setState({
-            [e.currentTarget.name]: e.currentTarget.value,
+            [e.currentTarget.id]: e.currentTarget.value,
         })
     }
 
     public render() {
         const { submitSuccess, loading } = this.state;
+        // const classes = useStyles();
         // fields is stored onchange
         return (
             <div>
-                <form className={classes.container} noValidate autoComplete="off">
+                <form className={classes.container} onSubmit={this.processFormSubmission} noValidate autoComplete="off">
                     <Card className={classes.card}>
                         <CardHeader className={classes.header} title="Add a Book" />
                         <CardContent>
@@ -81,9 +82,43 @@ class Create extends React.Component<RouteComponentProps, IFormState> {
                                 <TextField
                                     id="isbn"
                                     label="ISBN"
+                                    placeholder="ISBN"
+                                    onChange={(e) => this.handleInputChanges(e)}
+                                />
+                                <TextField
+                                    id="book_name"
+                                    label="Book Name"
+                                    placeholder="Book Name"
+                                    onChange={(e) => this.handleInputChanges(e)}
+                                />
+                                <TextField
+                                    id="company"
+                                    label="Company"
+                                    placeholder="Company"
+                                    onChange={(e) => this.handleInputChanges(e)}
+                                />
+                                <TextField
+                                    id="price"
+                                    label="Price"
+                                    placeholder="Price"
+                                    onChange={(e) => this.handleInputChanges(e)}
+                                />
+                                <TextField
+                                    id="genre_code"
+                                    label="Genre Code"
+                                    placeholder="Genre Code"
+                                    onChange={(e) => this.handleInputChanges(e)}
                                 />
                             </div>
                         </CardContent>
+                        <CardActions>
+                            <Button
+                            className={classes.addBtn}
+                            type="submit"
+                            >
+                            Add
+                            </Button>
+                        </CardActions>
                     </Card>
                 </form>
             </div>

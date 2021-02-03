@@ -12,9 +12,12 @@ describe('My math library', () => {
         expect(add(3, 4)).to.equal(7);
     });
 
+    // in ES5,
+    /*
     var should = require('chai').should()
     , pritz = 4;
     pritz.should.equal(add(3, 1));
+    */
 
     var assert = require('chai').assert, puri = 22
     assert.typeOf(puri, 'number');

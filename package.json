@@ -22,7 +22,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "test": "nyc ./node_modules/.bin/_mocha 'tests/**/*.test.ts'",
+    "test": "nyc ./node_modules/.bin/_mocha 'tests/**/*.test.ts', 'tests/**/*.test.tsx'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
