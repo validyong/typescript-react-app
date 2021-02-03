@@ -40,3 +40,10 @@ the presence of tsconfig.json indicate root directory of the project
 
 45° = 1/4 pi
 120° = 2/3 pi
+
+
+install sass
+
+```powershell
+yarn add node-sass
+```
