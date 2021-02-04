@@ -2,7 +2,6 @@ import * as React from 'react';
 import axios from 'axios';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { textSpanIntersectsWithPosition } from 'typescript';
-import classes from '*.module.css';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
@@ -12,6 +11,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import CardHeader from '@material-ui/core/CardHeader';
 import Button from '@material-ui/core/Button';
+
+// TODO puniki
+// import './../../styles/shared.scss';
 
 export interface IValues {
     isbn: string,
@@ -74,9 +76,9 @@ class Create extends React.Component<RouteComponentProps, IFormState> {
         // fields is stored onchange
         return (
             <div>
-                <form className={classes.container} onSubmit={this.processFormSubmission} noValidate autoComplete="off">
-                    <Card className={classes.card}>
-                        <CardHeader className={classes.header} title="Add a Book" />
+                <form onSubmit={this.processFormSubmission} noValidate autoComplete="off">
+                    <Card>
+                        <CardHeader title="Add a Book" />
                         <CardContent>
                             <div>
                                 <TextField
@@ -113,7 +115,6 @@ class Create extends React.Component<RouteComponentProps, IFormState> {
                         </CardContent>
                         <CardActions>
                             <Button
-                            className={classes.addBtn}
                             type="submit"
                             >
                             Add
