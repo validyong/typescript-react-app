@@ -6,6 +6,9 @@ import * as mocha from 'mocha';
 import * as chai from 'chai';
 import ReactTestUtils, { act } from 'react-dom/test-utils';
 import ReactDOM from 'react-dom';
+import React from "react";
+import { render, fireEvent, waitForElement } from "@testing-library/react";
+
 
 let container;
 
